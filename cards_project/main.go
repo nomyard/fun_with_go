@@ -1,12 +1,7 @@
 package main
 
 func main() {
-	cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Six of Spades")
+	cards := newDeck() //cards is initialized to the newDeck function
 
-	cards.print()
-}
-
-func newCard() string {
-	return "Five of Diamonds"
+	cards.print() // use the print receiver function to display to stdout (monitor)
 }

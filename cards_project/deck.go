@@ -9,6 +9,27 @@ import (
 
 type deck []string
 
+func newDeck() deck {
+	cards := deck{} // cards is initialized to the deck slice
+
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
+	//cardSuits is a new slice of values
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
+	//cardValues is a new slice of values
+
+	for _, suit := range cardSuits {
+		//for each suit in the slice of cardSuits
+		for _, value := range cardValues {
+			//for each value in the slice of cardValues
+			cards = append(cards, value+" of "+suit)
+			//append to the cards variable, the value and suit to concatenate a string
+			//of values to display to the stdout (monitor).
+		}
+	}
+	return cards
+	//return the cards variable.
+}
+
 func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
