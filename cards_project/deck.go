@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // Create a new type of 'deck'
 //which is a slice of strings
@@ -36,21 +34,18 @@ func (d deck) print() {
 	}
 }
 
-// type deck []string
-// aka deck extends string
-//able to use deck in place of []string now
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
 
-//func (d deck) print() {
-// 	for i, card := range d {
-// 		fmt.Println(i, card)
-// 	}
-// }
-// (d deck) d is the copy of the cards initialization in main.go.
-// deck is referring to the extension from earlier
+// d deck
 
-// for i, card := range d
+//d is the value, deck is the type
 
-// that line is making it possible to loop through the cards initialization
-// by taking the copy we made (through d) and assigning the contents to
-// i, card - we are then able to print out the contents of the original
-// cards initialization in main.go
+//deck was initialized at the very top of the file as a new slice
+// the type of deck is a slice which only receives strings
+
+//the deal function receives the value d (with the type of deck) as an argument
+//it also receives the value handSize (with the type of int) as an argument
+
+//we are then returning multiple values. Both return values will be the type of deck
