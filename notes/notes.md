@@ -14,5 +14,37 @@
 | go test    | runs any tests associated with the current project         |
 
 ---
+```
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",")
+}
+```
+### Breaking this function down
+---
 
+```
+func (d deck) toString() string
+```
+* In this line I'm declaring a function named toString
+* (d deck) is a receiver function used to give me access to the deck value "d"
+* The last "string" argument is telling Golang that this function is going to return a string
 
+---
+```
+return strings.Join([]string(d), ",")
+```
+* I am returning an in-built method called "Join" by using the strings library provided by Golang
+* Inside of the "strings.Join()", the argument required is a slice of the type string
+* Slice of string requires the argument that needs to be joined. In this case the value "d" of the type deck
+* The last and final argument is a separator that tells the join function how to split between indexes of the slice we are trying to join. 
+
+### Example
+---
+```
+{"ONE", "TWO", "THREE"}
+```
+### Would become
+---
+```
+"ONE,TWO,THREE"
+```

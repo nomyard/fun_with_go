@@ -1,12 +1,9 @@
 package main
 
 func main() {
-	cards := newDeck() //cards is initialized to the newDeck function
+	cards := newDeck()
+	cards.saveToFile("my_cards")
 
-	hand, remainingCards := deal(cards, 5)
-
-	hand.print()
-	remainingCards.print()
 }
 
 //deal returns two values
