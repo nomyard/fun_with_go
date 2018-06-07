@@ -48,3 +48,12 @@ return strings.Join([]string(d), ",")
 ```
 "ONE,TWO,THREE"
 ```
+## Pointers
+---
+&variable - give me the memory address of the value this variable is pointing at
+
+*pointer - give me the value this memory address is pointing at
+
+Turn _address_ into _value_ with *address
+
+Turn _value_ into _address_ with &value
