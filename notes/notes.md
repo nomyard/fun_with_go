@@ -88,10 +88,10 @@ don't worry about pointers when dealing with _REFERENCE TYPES_
 
 ---
 
-| Maps                                                | Structs                                                   |
-| --------------------------------------------------- | :-------------------------------------------------------- |
-| All _keys_ must be the same type                    | Values can be of different type                           |
-| All _values_ must be the same type                  | Keys don't support indexing                               |
-| Keys are indexed - we can iterate over them         | Value Type!                                               |
-| Use to represent a collection of related properties | You need to know all the different fields at compile time |
-|Reference Type! | Use to represent a "thing" with a lot of different properties |
+| Maps                                                | Structs                                                       |
+| --------------------------------------------------- | :------------------------------------------------------------ |
+| All _keys_ must be the same type                    | Values can be of different type                               |
+| All _values_ must be the same type                  | Keys don't support indexing                                   |
+| Keys are indexed - we can iterate over them         | Value Type!                                                   |
+| Use to represent a collection of related properties | You need to know all the different fields at compile time     |
+| Reference Type!                                     | Use to represent a "thing" with a lot of different properties |
